@@ -1,0 +1,38 @@
+a,a:visited { color: #fff; }
+a:hover { color: #fff; }
+
+.social-container {
+	width: 255px;
+	position: fixed;
+    top: 15px;
+    right: 4%;
+}
+
+.social {
+	width: 85px; height: 100px; 	
+	display: block; text-align: center; line-height:103px; color: #fff;
+	
+	float: right;
+	position: relative;
+	transform:rotateY(0deg);
+	transition:transform .25s ease-out;
+	transform-style:preserve-3d;
+}
+.social > div {
+	width: 85px; height: 100px; background: #7EB3EB;
+	position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+}
+.social >.front {
+	transform:translateZ(34px);
+}
+.social >.back {
+	background: #3B5998; font-size: 3em;
+	transform:rotateY(-100deg) translateZ(34px);
+}
+
+.social.social-github > .back { background: #f3f3f3; color: #000; }
+.social.social-linkedin > .back { background: #4875B4; }
+
+.social:hover {
+	transform: rotateY(100deg);
+}
